@@ -35,7 +35,7 @@ module Wrapper (clock, reset);
 
 
 	// ADD YOUR MEMORY FILE HERE
-	localparam INSTR_FILE = "positive_no_bypass";
+	localparam INSTR_FILE = "";
 	
 	// Main Processing Unit
 	processor CPU(.clock(clock), .reset(reset), 
