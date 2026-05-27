@@ -1,0 +1,20 @@
+module functionCalc(g, p, A, B);
+    input [7:0] A, B;
+    output [7:0] p,g;
+    and (g[0], A[0], B[0]);
+    and (g[1], A[1], B[1]);
+    and (g[2], A[2], B[2]);
+    and (g[3], A[3], B[3]);
+    and (g[4], A[4], B[4]);
+    and (g[5], A[5], B[5]);
+    and (g[6], A[6], B[6]);
+    and (g[7], A[7], B[7]);
+    or (p[0], A[0], B[0]);
+    or (p[1], A[1], B[1]);
+    or (p[2], A[2], B[2]);
+    or (p[3], A[3], B[3]);
+    or (p[4], A[4], B[4]);
+    or (p[5], A[5], B[5]);
+    or (p[6], A[6], B[6]);
+    or (p[7], A[7], B[7]);
+endmodule

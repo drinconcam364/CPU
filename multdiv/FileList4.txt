@@ -1,0 +1,16 @@
+aluControl.v
+blockAdder.v
+claAdder.v
+counter.v
+dffe_ref.v
+divRegister64.v
+divide.v
+functionCalc.v
+multAlu.v
+multdiv.v
+multdiv_tb.v
+multiply.v
+register.v
+register64.v
+subAssign.v
+tff.v
