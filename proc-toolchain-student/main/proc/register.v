@@ -4,7 +4,7 @@ module register (clk, in, out, clrn, we);//d, clk, clrn, prn, in_enable, out_ena
     input clk, we, clrn;
     wire ena, zero;
     assign zero = 1'b0;
-    and (ena, clk, we);
+    assign ena = we;//and (ena, clk, we);
     dffe_ref d0 (.q(out[0]), .d(in[0]), .clk(clk), .en(ena), .clr(clrn));//q, d, clk, en, clr)
     dffe_ref d1 (.q(out[1]), .d(in[1]), .clk(clk), .en(ena), .clr(clrn));
     dffe_ref d2 (.q(out[2]), .d(in[2]), .clk(clk), .en(ena), .clr(clrn));
