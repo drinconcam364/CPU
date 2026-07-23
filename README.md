@@ -1,15 +1,15 @@
-# ECE 350 - CP4: Five-Stage Pipelined Processor
+# ECE 350 - Five-Stage Pipelined RISCV Processor Capable of Executing MIPS Assembly
 
 ## Overview
 
-This repository contains a five-stage, single-issue, 32-bit pipelined processor implemented in
-structural Verilog, built for ECE 350 Checkpoint 4. The design integrates a register file, ALU,
+This repository contains a five-stage, single-issue, 32-bit pipelined processor implemented entirely in
+structural Verilog, built for ECE 350, Digital Systems. The design integrates a register file, ALU,
 and mult/div unit, and implements a full custom ISA with pipeline hazard detection, bypassing,
 and stalling.
 
-> [Add 2-3 sentences here summarizing your specific implementation - e.g. whether you used
-> your own regfile/ALU/multdiv or the provided behavioral components, and your overall
-> approach to the pipeline.]
+## Pipeline
+<img src="pipeline.png" width="600">
+The processor contains the classic RISC pipeline for increasing instruction throughput, consisting of 5 stages: Fetch(F), Decode(D), Execute(X), Memory(M), and Writeback(W).
 
 ## Instruction Set (ISA)
 
@@ -87,26 +87,3 @@ Checking for banned Verilog constructs:
 ```bash
 python run.py -d <PATH_TO_PROC_FOLDER> -l 4
 ```
-
-## Known Issues / Limitations
-
-> [List anything not fully working, how you discovered it (which test failed), what you tried,
-> and what a fix might look like.]
-
-- [e.g. "Back-to-back `mul` followed by dependent `add` occasionally reads stale data - under
-  investigation."]
-
-## Design Notes / Unique Choices
-
-> [Highlight anything nonstandard about your design and your reasoning - e.g. how you
-  structured your hazard unit, any optimizations to reduce stalls, or tradeoffs you made.]
-
-## Testing Strategy
-
-> [Describe how you wrote your own assembly test cases beyond the provided ones, what edge
-  cases you targeted (e.g. back-to-back hazards, `$r0` writes, branch-then-hazard), and how you
-  verified correctness (regfile dumps via `*_exp.txt`).]
-
-## Authors
-
-> [Your name(s) / team]
